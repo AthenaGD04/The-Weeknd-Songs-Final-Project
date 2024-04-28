@@ -10,3 +10,10 @@ The data used for the analyses was gathered by looking at the top 30 songs of th
 I gathered the data by searching online The Weeknd's top 30 songs (as of February 18, 2024) in order to decipher whether or not there are correlations between the above variables. Finally, I checked Spotify for the amount of listeners each songs garners.
 
 ## **Operationalization**
+streams, featured artists, genre ... quant
+energy level, emotional tone... qual
+
+The concept of the 
+The concept of the perceived level of emotion in a song was operationalized by a qualitative variable called "emotional tone".
+
+The concept of the perceived level of energy in a song was operationalizated by a qualitative variable called "energy level". Each song was measured using a qualitative coding scheme from 1-10. 1 describes a song as 
