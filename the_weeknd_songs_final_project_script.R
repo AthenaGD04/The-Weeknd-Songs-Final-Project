@@ -1,7 +1,7 @@
 ## Project:  STA 215, Spring 2024, Final Project
 # Located:   Kline TCNJ Google Drive
 # File Name: template
-# Date:      4/24/2024
+# Date:      4/29/2024
 # Who:       Athena Didizian
 
 ## Load packages
@@ -19,7 +19,7 @@ library(psych)
 data <- read_delim("raw_data.csv")
 
 ##################################################################################
-############### Table 1: descriptive statistics    ####################   
+####################### Table 1: Descriptive Statistics    #######################  
 ##################################################################################
 # Streams per song
 mean(data$streams)
@@ -61,13 +61,13 @@ table(data$featured_artists)
 table(data$genre)
 
 ##################################################################################
-####################  Table 2: Contingency Table                ####################   
+#######################  Table 2: Contingency Table   ############################   
 ##################################################################################
 table(data$featured_artists, data$genre)
 chisq.test(data$featured_artists, data$genre)
 
 ##################################################################################
-##########m########## Figure 1: Boxplot             ####################   
+##########m################ Figure 1: Boxplot #################################### 
 ##################################################################################
 # Box Plot for Featured Artists by Emotional Tone
 ggplot(raw_data, aes(x = data$genre, y = data$emotional_tone)) +
@@ -78,7 +78,7 @@ ggplot(raw_data, aes(x = data$genre, y = data$emotional_tone)) +
   theme_minimal()
 
 ##################################################################################
-####################   Figure 2: scatter plot             ####################   
+##########################  Figure 2: Scatter Plot  ##############################   
 ##################################################################################
 #### Scatter Plot for Emotional Tone by Energy Level
 linear_plot <- plot(data$emotional_tone, data$energy_level)
@@ -98,15 +98,13 @@ summary(linear_relationship)
 
 # Add the linear regression line to the scatter plot
 # NOTE: double check the scatter plot is currently in your utilities window!
-abline(linear_relationship, col = "red")Plot()
+abline(linear_relationship, col = "red")
 
 ##################################################################################
-####################  Figure 3: residual plot                ####################   
+#########################  Figure 3: Residual Plot  ############################## 
 ##################################################################################
 # Plot the residuals
 plot(raw_data$energy_level, residuals(linear_relationship))
 
 # Add a horizontal line at zero to indicate the baseline
 abline(h = 0, col = "red")
-
-
